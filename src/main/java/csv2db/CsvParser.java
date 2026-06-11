@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.ArrayList;
-import csv2db.VehiclePostion;
+// import csv2db.VehiclePostion;
 
 public class CsvParser {
     private Path filePath;

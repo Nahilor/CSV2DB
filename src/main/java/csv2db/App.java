@@ -1,11 +1,10 @@
 package csv2db;
 import java.io.IOException;
 import java.util.List;
-import csv2db.CsvParser;
-import csv2db.VehiclePostion;
-/**
- * Hello world!
- */
+// import csv2db.CsvParser;
+// import csv2db.VehiclePostion;
+
+
 public class App {
     public static void main(String[] args) throws IOException{
         CsvParser csvParser = new CsvParser("../../../../data/vehicles.csv");
