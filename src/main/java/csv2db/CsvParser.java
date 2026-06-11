@@ -1,14 +1,19 @@
 package csv2db;
 // This class will be responsible for parsing CSV files.
 // and converts it into a more manageable format.
+// To use this class, you will need to create an instance of it and then call the readContent() method to read the content of the CSV file. 
+// After that, you can call the parse() method to parse the content and convert it into a list of VehiclePostion objects.
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.ArrayList;
-// import csv2db.VehiclePostion;
 
+
+// This class will be responsible for parsing CSV files and converting them into a list of VehiclePostion objects.
+// for now this class only can parse and convert this specific CSV file, but in the future it can be extended to parse and convert other CSV files as well.
+// or at least that is a possibility, but for now it is not a requirement, so I will focus on parsing and converting this specific CSV file.
 public class CsvParser {
     private Path filePath;
     private List<String> content;
@@ -22,12 +27,15 @@ public class CsvParser {
         this.filePath = Path.of(filePath);
     }
 
+    // This method will read the content of the CSV file and store it in a list of strings.
     public void readContent() throws IOException {
         content = new ArrayList<>();
         content = Files.readAllLines(filePath);
         content.remove(0); // remove the header line
     }
 
+
+    // This method will parse the content of the CSV file and convert it into a list of VehiclePostion objects.
     public List<VehiclePostion> parse() {
         vehiclePostionsAll = new ArrayList<>();
         vehiclePostionsSuccessful = new ArrayList<>();
